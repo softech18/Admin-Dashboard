@@ -1,0 +1,32 @@
+/* ems/style.css */
+
+/* —— Ensure the wrapper and sidebar behave correctly —— */
+#wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar-wrapper {
+  min-width: 250px;
+  max-width: 250px;
+  transition: all 0.3s;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: -250px; /* Hide sidebar when toggled */
+}
+
+/* Push page-content over when sidebar is hidden */
+#page-content-wrapper {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: -250px; /* Hide by default on small screens */
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+}
