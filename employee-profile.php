@@ -38,7 +38,7 @@ if ($result && $result->num_rows === 1) {
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid #0d6efd;
-      margin-top: -70px;
+      margin-top: 10px;
       background: #fff;
     }
     .header-bg {
